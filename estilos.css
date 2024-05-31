@@ -1,0 +1,21 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: cadetblue;
+    text-align: center;
+}
+
+.pDelReloj{
+    margin-top: 2cm;
+    font-size: 27px;
+}
+
+.hora{
+    font-size: 27px;
+    margin-top: 10px;
+    padding: 10px 0;
+    background: red;
+}
+

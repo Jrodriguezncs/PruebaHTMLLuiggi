@@ -1,6 +1,7 @@
 <html>
 <head>
-<title>La revolucion de las maquinas</title>    
+<title>La revolucion de las maquinas</title>
+<link rel="stylesheet" href="estilos.css">    
 </head>
 <body>
     <!-- Rama:sidra-rama caida- -->
@@ -8,8 +9,30 @@
     <p> párrafo en Nueva rama 30/5 </p>
     <h2 style="color:red">Agregado por Luis</h2>
 
-    <p>And the maching learning is...</p>
-
+    <p class="pDelReloj">El reloj... cuantas horas le quedan al dia:</p>
+    <form name="Reloj">
+        <input type="text" size="27" name="tiempo" value="mm:hh:ss" title="Tiempo restante para finalizar el día" class="hora">
+        
+        <script language="JavaScript">
+        var tiempoAtras;
+        updateReloj();
+        function updateReloj() {
+        var tiempo = new Date();
+        var hora = 23-tiempo.getHours();
+        var minutos = 59-tiempo.getMinutes();
+        var segundos = 59-tiempo.getSeconds();
+        
+        tiempoAtras= (hora < 10) ? hora :hora;
+        tiempoAtras+= ((minutos < 10) ? ":0" : ":") + minutos;
+        tiempoAtras+= ((segundos < 10) ? ":0" : ":") + segundos;
+        
+        document.Reloj.tiempo.value = tiempoAtras;
+        
+        setTimeout("updateReloj()",1000);
+        }
+        
+        </script>
+        </form>
 
     <script src="pruebas.js"></script>
 </body>
